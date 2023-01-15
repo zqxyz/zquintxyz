@@ -19,6 +19,7 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
+        'vue/no-v-html': 'off',
     },
     overrides: [
         {
