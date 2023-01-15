@@ -3,14 +3,16 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 const express = require('express');
 const helmet = require('helmet');
 const history = require('connect-history-api-fallback');
+const cors = require('cors');
 // require('./models/associations')
 
-const exampleRoute = require('./routes/example.route');
+const postsRoute = require('./routes/posts.route');
 
 const app = express();
 
 app.use(helmet());
-// app.use(history());
+app.use(history());
+app.use(cors());
 
 app.use(express.urlencoded({ extended: true, limit: '15mb' }));
 app.use(express.json({ limit: '15mb' }));
@@ -19,7 +21,7 @@ app.use(express.json({ limit: '15mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.use('/example', exampleRoute);
+app.use('/posts', postsRoute);
 
 app.use((req, res, next) => {
     res.status(404).send('Requested endpoint does not exist');
