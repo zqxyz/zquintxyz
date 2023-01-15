@@ -6,12 +6,12 @@
 
 ## Features
 
-- Vue 3
-- TypeScript
-- Tailwind CSS
-- Simple store with global state
-- Vue Router
-- ESLint
+-   Vue 3
+-   TypeScript
+-   Tailwind CSS
+-   Simple store with global state
+-   Vue Router
+-   ESLint
 
 ## Project setup and usage
 

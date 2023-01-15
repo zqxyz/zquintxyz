@@ -14,12 +14,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: {},
+    components: {},
 })
 </script>
 
 <style scoped>
 h1 {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 </style>
