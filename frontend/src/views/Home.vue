@@ -1,15 +1,15 @@
-<template>
-  <HelloWorld msg="Vue 3, Vite, TypeScript & Tailwind CSS" />
-</template>
+<script lang="ts" setup>
+import { globalState } from '../store';
+import PostsComponent from '../components/PostsComponent.vue';
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-import HelloWorld from '../components/HelloWorld.vue';
-
-export default defineComponent({
-    components: {
-        HelloWorld,
-    },
-});
+console.log('huh');
 </script>
+
+<template>
+  <div>
+    <div class="text-center text-sm text-gray-400 italic font-mono">
+      zquint.xyz -- <span class="text-black">{{ globalState.status }}</span>
+    </div>
+    <PostsComponent />
+  </div>
+</template>

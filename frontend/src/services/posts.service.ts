@@ -8,4 +8,10 @@ class PostsService {
   }
 }
 
-export const postsService = new PostsService();
+interface Response {
+  data: Record<string, string | number>[];
+}
+
+const postsService = new PostsService();
+
+export { postsService, Response };

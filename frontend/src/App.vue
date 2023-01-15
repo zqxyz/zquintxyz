@@ -9,6 +9,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+console.log('App.vue');
+
 export default defineComponent({
     components: {},
 });
