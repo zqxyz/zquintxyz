@@ -7,6 +7,9 @@ const postsController = require('../controllers/posts.controller');
 // @GET /posts
 router.get('/', postsController.getAllPosts);
 
+// @GET /posts/id
+router.get('/:id', postsController.getPost);
+
 // @GET /posts
 // router.get('/:postId', exampleMiddleWare, postsController.getPost);
 

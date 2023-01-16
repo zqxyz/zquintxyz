@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <router-link :to="to">
-    <h1>
+    <h1 class="hover:underline">
       {{ title }}
     </h1>
   </router-link>
