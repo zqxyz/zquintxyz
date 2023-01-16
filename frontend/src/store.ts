@@ -1,10 +1,17 @@
-import { ref } from 'vue';
-
-type Status = 'loading' | 'ready' | 'error' | 'idle';
+import { ref, watch } from 'vue';
+import { PostType, Status } from './types';
 
 const globalState = ref({
   status: 'idle' as Status,
-  posts: [] as Record<string, string>[],
+  activePage: '' as string,
+  posts: [] as PostType[],
 });
+
+watch(
+  () => globalState.value.activePage,
+  () => {
+    document.title = globalState.value.activePage;
+  },
+);
 
 export { globalState };

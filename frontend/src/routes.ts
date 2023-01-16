@@ -1,8 +1,10 @@
-import Home from './views/Home.vue';
+import Posts from './views/Posts.view.vue';
+import SinglePostView from './views/Post.view.vue';
 import NotFound from './views/NotFound.vue';
 
 export const routes = [
-  { path: '/', component: Home, meta: { title: 'Home' } },
+  { path: '/', component: Posts, meta: { title: 'Home' } },
+  { path: '/post/:id', component: SinglePostView, meta: { title: 'Post' } },
   {
     path: '/:pathMatch(.*)*',
     component: NotFound,

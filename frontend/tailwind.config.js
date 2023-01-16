@@ -8,6 +8,9 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                sky: '#00354c',
+            },
         },
     },
     plugins: [

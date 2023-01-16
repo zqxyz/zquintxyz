@@ -1,25 +1,22 @@
-<template>
-  <div class="prose max-w-none">
-    <h1>Not Found.</h1>
-    <p>
-      You’ve landed on a URL that doesn’t seem to exist. Return
-      <router-link to="/">
-        home
-      </router-link>.
-    </p>
-  </div>
-</template>
+<script lang="ts" setup>
+import { onMounted } from 'vue';
+import { globalState } from '../store';
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-    components: {},
+onMounted(() => {
+  globalState.value.status = 'error';
+  globalState.value.activePage = -1;
 });
 </script>
 
-<style scoped>
-h1 {
-    margin-bottom: 0;
-}
-</style>
+<template>
+  <div class="prose max-w-none">
+    <h1>404</h1>
+    <p>
+      Lamb sauce not located. Return
+      <router-link
+        to="/"
+        text="home"
+      />.
+    </p>
+  </div>
+</template>

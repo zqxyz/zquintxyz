@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { globalState } from '../store';
-import { postsService, Response } from '../services/posts.service';
-import Post from '../components/Post.vue';
+import { globalState } from '../../store';
+import { postsService, Response } from '../../services/posts.service';
+import Post from './Post.vue';
 
 const state = globalState.value;
 
 onMounted(() => {
+  state.activePage = 'Home';
+
   state.status = 'loading';
   postsService
     .getAllPosts()
@@ -26,21 +28,13 @@ onMounted(() => {
 
 <template>
   <section>
-    <article
+    <Post
       v-for="post in globalState.posts"
       :key="post.id"
-    >
-      <Post
-        :title="post.title"
-        :body="post.body"
-        :timestamp="post.timestamp"
-      />
-    </article>
-    <div v-if="globalState.status === 'loading'">
-      <p>Loading...</p>
-    </div>
-    <div v-else-if="globalState.status === 'error'">
-      <p>Error</p>
-    </div>
+      :post-id="post.id"
+      :title="post.title"
+      :body="post.body"
+      :timestamp="post.timestamp"
+    />
   </section>
 </template>
