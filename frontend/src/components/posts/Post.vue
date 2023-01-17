@@ -25,11 +25,11 @@ const markedPurifiedBody = DOMPurify.sanitize(marked.parse(props.body || ''));
       :to="`/post/${props.postId}`"
       :title="props.title"
     />
-    <span class="my-2 text-sm text-gray-500 font-semibold">
+    <div class="my-2 text-md text-gray-500 font-semibold">
       {{ timestamp }}
-    </span>
+    </div>
     <p
-      class="text-xl"
+      class="text-2xl"
       v-html="markedPurifiedBody"
     />
   </article>

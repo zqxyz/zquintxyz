@@ -22,11 +22,11 @@ const Pages = [
 
 <template>
   <aside>
-    <ul class="list-none text-right">
+    <ul class="list-none">
       <li
         v-for="page in Pages"
         :key="page.name"
-        class="mb-1 text-gray-600"
+        class="mb-1 text-gray-600 text-xl inline-block lg:block"
       >
         <router-link
           :to="page.path"
@@ -40,7 +40,7 @@ const Pages = [
 
 <style>
 .aside-link {
-  @apply transition-all rounded-md hover:p-1 hover:-mr-1 hover:bg-gray-200 active:p-1 active:bg-gray-300;
+  @apply transition-all rounded-md p-1 lg:p-0 hover:p-1 lg:hover:-mr-1 active:p-1 hover:bg-gray-200 active:bg-gray-300;
 }
 .active {
   @apply font-semibold text-gray-800;

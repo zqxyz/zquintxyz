@@ -12,7 +12,11 @@ html {
 }
 
 html {
-  @apply bg-cover bg-no-repeat bg-[center_top] bg-fixed bg-[url('https://zquintxyz-public.s3.amazonaws.com/francisco-andreotti-noedenF0hNM-unsplash.jpg')];
+  @apply bg-[#063a50] bg-cover bg-no-repeat bg-[center_top] bg-fixed bg-[url('https://zquintxyz-public.s3.amazonaws.com/francisco-andreotti-noedenF0hNM-unsplash.jpg')];
+}
+
+body {
+  @apply text-2xl;
 }
 
 ul {
@@ -24,5 +28,5 @@ ul {
 }
 
 h1 {
-  @apply mb-[0.15em] text-3xl font-black text-gray-800;
+  @apply mb-[0.15em] text-4xl font-black text-gray-800;
 }
