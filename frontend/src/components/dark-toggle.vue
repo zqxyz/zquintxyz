@@ -2,7 +2,12 @@
 import { ref, onMounted, watch } from 'vue';
 import { globalState } from '../store';
 import icon from './icon.vue';
-import { mdiMoonWaxingCrescent, mdiWeatherSunny } from '@mdi/js';
+import {
+  mdiSunglasses,
+  mdiLightbulbVariantOutline,
+  mdiLightSwitchOff,
+  mdiLightSwitchOn,
+} from '@mdi/js';
 import { DarkMode } from '../types';
 
 const darkMode = ref<DarkMode>('light');
@@ -59,17 +64,18 @@ function toggleDarkMode() {
     class="text-right"
   >
     <button
-      class="relative rounded-full px-[3px] my-auto hover:bg-gray-300 dark:hover:bg-gray-700 active:bg-gray-400 dark:active:bg-gray-600 transition-all duration-200 ease-in-out"
+      id="dark-toggle-button"
+      class="relative rounded-full px-[3px] my-auto transition-all duration-200 ease-in-out"
       @click="toggleDarkMode"
     >
       <Transition>
         <icon
           v-if="darkMode === 'light'"
-          :path="mdiMoonWaxingCrescent"
+          :path="mdiSunglasses"
         />
         <icon
           v-else
-          :path="mdiWeatherSunny"
+          :path="mdiLightbulbVariantOutline"
         />
       </Transition>
     </button>
@@ -77,7 +83,6 @@ function toggleDarkMode() {
 </template>
 
 <style>
-/* vue transition */
 .v-enter-active,
 .v-leave-active {
   transition: width 0.2s ease;
@@ -86,5 +91,10 @@ function toggleDarkMode() {
 .v-enter-from,
 .v-leave-to {
   width: 0;
+}
+
+#dark-toggle-button {
+  @apply hover:bg-gray-300 dark:hover:bg-gray-700 active:bg-gray-400 dark:active:bg-gray-600;
+  @apply dark:hover:bg-gray-800 dark:active:bg-black;
 }
 </style>

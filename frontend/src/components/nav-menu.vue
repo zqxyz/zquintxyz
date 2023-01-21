@@ -61,7 +61,7 @@ const Pages = [
 
 .aside-link {
   @apply transition-all rounded-md p-1 lg:p-0 hover:p-1 lg:hover:-mr-1 active:p-1 hover:bg-gray-300 active:bg-[#b8b8b8];
-  @apply dark:hover:bg-gray-700 dark:active:bg-gray-500;
+  @apply dark:hover:bg-gray-700 dark:active:bg-gray-600;
 }
 .active {
   @apply font-semibold text-gray-800 dark:text-gray-100;
