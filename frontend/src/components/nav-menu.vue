@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { globalState } from '../store';
 import { computed } from 'vue';
-import SvgIcon from '@jamescoyle/vue-icon';
+import icon from './icon.vue';
 import { mdiPineTree } from '@mdi/js';
 
 const activePage = computed(() => globalState.value.activePage);
@@ -31,12 +31,10 @@ const Pages = [
         class="mb-1 text-gray-700 dark:text-gray-200 text-xl inline-block lg:block"
       >
         <Transition>
-          <svg-icon
+          <icon
             v-if="activePage === page.name"
-            type="mdi"
-            :size="18"
-            class="inline mx-1 fade text-gray-700 dark:text-gray-300"
             :path="mdiPineTree"
+            control-class="dark:text-[#4f0]"
           />
         </Transition>
         <router-link

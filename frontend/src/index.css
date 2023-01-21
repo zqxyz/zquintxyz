@@ -12,15 +12,15 @@ html {
 }
 
 html {
-  @apply bg-[#182e1c] bg-cover bg-no-repeat bg-[center_top] bg-fixed;
+  @apply bg-cover bg-no-repeat bg-[center_top] bg-fixed;
 }
 
 .dark-bg {
-  @apply bg-[#181817];
+  @apply bg-[#181817] sm:bg-[#1c1c1a];
 }
 
 .light-bg {
-  @apply bg-[url('https://zquintxyz-public.s3.amazonaws.com/krisjanis-mezulis-Ndz3w6MCeWc-unsplash.jpg')];
+  @apply bg-[#dedede] sm:bg-[#85827e];
 }
 
 body {
@@ -36,5 +36,5 @@ ul {
 }
 
 h1 {
-  @apply inline-block mb-[0.15em] text-4xl font-black text-gray-800 dark:text-gray-100;
+  @apply inline-block mb-[0.15em] text-3xl md:text-4xl font-black text-gray-800 dark:text-gray-100;
 }

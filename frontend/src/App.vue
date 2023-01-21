@@ -39,9 +39,10 @@ watch(
 
 <style>
 .containerClass {
-  @apply mx-auto p-6 xl:mb-[200px];
+  @apply mx-auto p-1 md:p-6 xl:mb-[200px];
   @apply w-full xl:max-w-5xl xl:translate-y-[100px];
   @apply bg-[#dedede] dark:bg-[#181817];
-  @apply transition-all opacity-90 dark:opacity-[0.97] xl:rounded-lg;
+  @apply xl:dark:outline xl:dark:outline-[#ffbf00] xl:dark:outline-1;
+  @apply transition-all xl:rounded-lg;
 }
 </style>
