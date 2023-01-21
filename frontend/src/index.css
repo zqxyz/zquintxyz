@@ -12,11 +12,19 @@ html {
 }
 
 html {
-  @apply bg-[#063a50] bg-cover bg-no-repeat bg-[center_top] bg-fixed bg-[url('https://zquintxyz-public.s3.amazonaws.com/francisco-andreotti-noedenF0hNM-unsplash.jpg')];
+  @apply bg-[#182e1c] bg-cover bg-no-repeat bg-[center_top] bg-fixed;
+}
+
+.dark-bg {
+  @apply bg-[#181817];
+}
+
+.light-bg {
+  @apply bg-[url('https://zquintxyz-public.s3.amazonaws.com/krisjanis-mezulis-Ndz3w6MCeWc-unsplash.jpg')];
 }
 
 body {
-  @apply text-2xl;
+  @apply text-xl md:text-2xl text-gray-800 dark:text-gray-100;
 }
 
 ul {
@@ -28,5 +36,5 @@ ul {
 }
 
 h1 {
-  @apply mb-[0.15em] text-4xl font-black text-gray-800;
+  @apply inline-block mb-[0.15em] text-4xl font-black text-gray-800 dark:text-gray-100;
 }

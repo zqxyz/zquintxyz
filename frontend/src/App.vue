@@ -1,46 +1,47 @@
 <script lang="ts" setup>
 import { globalState } from './store';
-import { computed } from 'vue';
-import Header from './components/Header.vue';
-import Menu from './components/Menu.vue';
+import { watch } from 'vue';
+import navMenu from './components/nav-menu.vue';
+import darkToggle from './components/dark-toggle.vue';
 
-const status = computed(() => globalState.value.status);
+watch(
+  () => globalState.value.activePage,
+  () => {
+    document.title = globalState.value.activePage
+      ? globalState.value.activePage
+      : 'zquint.xyz';
+  },
+);
 </script>
 
 <template>
-  <div
-    class="transition-all max-w-3xl lg:max-w-5xl mx-auto p-6 pb-16 md:px-8 lg:px-12 shadow-sm lg:rounded-sm lg:translate-y-[100px] lg:mb-[200px] cement-bg"
-  >
-    <Header :status="status" />
-    <div class="flex flex-col lg:flex-row lg:space-x-12">
-      <div class="flex flex-col mb-4 text-center lg:mb-0 lg:text-right lg:w-1/5">
-        <Menu />
-      </div>
-      <div class="flex flex-col lg:w-4/5">
-        <router-view v-slot="{ Component, route }">
-          <transition>
+  <main>
+    <div class="containerClass">
+      <dark-toggle />
+      <div class="flex flex-col lg:flex-row lg:space-x-4">
+        <div
+          class="flex flex-col mb-8 text-center lg:mb-0 lg:text-right lg:w-1/6"
+        >
+          <navMenu />
+        </div>
+        <div class="flex flex-col lg:w-4/6 p-6 pt-0 rounded-l-md">
+          <router-view v-slot="{ Component, route }">
             <component
               :is="Component"
               :key="route.path"
             />
-          </transition>
-        </router-view>
+          </router-view>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <style>
-.v-enter-active {
-  transition: filter 0.4s ease-out;
-}
-
-.v-enter-from {
-  @apply blur-[1px] break-inside-avoid;
-}
-
-.cement-bg {
-  @apply bg-gray-50;
-  /* @apply bg-gray-50 bg-cover bg-no-repeat bg-[center_top] bg-fixed bg-[url('https://zquintxyz-public.s3.us-east-1.amazonaws.com/cement-texture.jpg')]; */
+.containerClass {
+  @apply mx-auto p-6 xl:mb-[200px];
+  @apply w-full xl:max-w-5xl xl:translate-y-[100px];
+  @apply bg-[#dedede] dark:bg-[#181817];
+  @apply transition-all opacity-90 dark:opacity-[0.97] xl:rounded-lg;
 }
 </style>

@@ -10,6 +10,10 @@
         "prettier": "prettier . --write"
     },
     "dependencies": {
+        "@jamescoyle/vue-icon": "^0.1.2",
+        "@mdi/font": "^7.1.96",
+        "@mdi/js": "^7.1.96",
+        "@mui/icons-material": "^5.11.0",
         "@tailwindcss/forms": "^0.4.0",
         "@tailwindcss/typography": "^0.5.2",
         "@types/marked": "^4.0.8",
