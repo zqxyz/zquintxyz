@@ -18,7 +18,7 @@ const postInState = computed(() => {
 watch(
   () => thisPost.value,
   () => {
-    state.activePage = (thisPost.value?.title || 'Post') + ' — zquint.xyz';
+    state.activePage = `"${thisPost.value?.title}"` || 'Post';
   },
 );
 

@@ -8,7 +8,7 @@ watch(
   () => globalState.value.activePage,
   () => {
     document.title = globalState.value.activePage
-      ? globalState.value.activePage
+      ? globalState.value.activePage + ' | zquint.xyz'
       : 'zquint.xyz';
   },
 );
@@ -44,5 +44,16 @@ watch(
   @apply bg-[#dedede] dark:bg-[#181817];
   @apply xl:dark:outline xl:dark:outline-[#ffbf00] xl:dark:outline-1;
   @apply transition-all xl:rounded-lg;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: width 0.2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  width: 0;
+  margin: 0 !important;
 }
 </style>
