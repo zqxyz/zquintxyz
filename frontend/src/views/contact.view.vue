@@ -14,7 +14,7 @@ onMounted(() => {
     </h1>
 
     <p class="font-mono">
-      const email = `work@${process.env.DOMAIN}`
+      const email = {{ '`work@${process'.concat('.env.DOMAIN}`') }}
     </p>
   </article>
 </template>

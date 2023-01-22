@@ -23,7 +23,7 @@ defineProps({
   <svg-icon
     type="mdi"
     :size="size"
-    :class="`inline mx-1 fade text-gray-700 dark:text-gray-100 relative -top-[2px] ${controlClass}`"
+    :class="`inline mx-1 fade text-gray-700 dark:text-gray-100 relative -top-[1px] ${controlClass}`"
     :path="path"
   />
 </template>

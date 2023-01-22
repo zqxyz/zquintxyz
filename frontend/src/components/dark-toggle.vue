@@ -71,10 +71,12 @@ function toggleDarkMode() {
       <Transition>
         <icon
           v-if="darkMode === 'light'"
+          :size="22"
           :path="mdiSunglasses"
         />
         <icon
           v-else
+          :size="22"
           :path="mdiLightbulbVariantOutline"
         />
       </Transition>
@@ -94,6 +96,7 @@ function toggleDarkMode() {
 }
 
 #dark-toggle-button {
+  @apply mr-2 mt-2 py-[3px] md:py-[1px] md:mt-0;
   @apply hover:bg-gray-300 dark:hover:bg-gray-700 active:bg-gray-400 dark:active:bg-gray-600;
   @apply dark:hover:bg-gray-800 dark:active:bg-black;
 }

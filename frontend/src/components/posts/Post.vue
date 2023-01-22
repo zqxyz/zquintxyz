@@ -38,7 +38,7 @@ const markedPurifiedBody = computed(() =>
       :to="`/post/${props.post?.id}`"
       :title="props.post?.title"
     />
-    <div class="my-2 text-lg text-gray-800 font-mono dark:text-gray-200">
+    <div class="my-2 text-lg font-light dark:font-thin text-gray-800 dark:text-gray-200">
       {{ timestamp }}
     </div>
     <div
@@ -51,7 +51,8 @@ const markedPurifiedBody = computed(() =>
 <style>
 .body-class {
   @apply mb-6 last-of-type:mb-0 break-inside-avoid;
-  @apply text-xl md:text-2xl leading-8 md:leading-9 text-gray-800 dark:text-gray-100;
+  @apply text-xl md:text-2xl leading-8 md:leading-9 text-gray-800 dark:text-white;
+  @apply font-normal dark:font-light;
 }
 
 .body-class p {
