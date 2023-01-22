@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import { globalState } from '../../store';
 import { postsService } from '../../services/posts.service';
 import loadingIndicator from '../loading-indicator.vue';
 import Post from './Post.vue';
 
 const state = globalState.value;
+
+const sortedPosts = computed(() => {
+  return [...state.posts].sort((a, b) => b.timestamp - a.timestamp);
+});
 
 onMounted(() => {
   state.activePage = 'Home';
@@ -17,7 +21,7 @@ onMounted(() => {
   <section>
     <loadingIndicator v-if="state.posts.length === 0" />
     <Post
-      v-for="post in state.posts"
+      v-for="post in sortedPosts"
       v-else
       :key="post.id"
       :post="post"

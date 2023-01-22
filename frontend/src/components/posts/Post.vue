@@ -41,12 +41,20 @@ const markedPurifiedBody = computed(() =>
     <div class="my-2 text-lg text-gray-800 font-mono dark:text-gray-200">
       {{ timestamp }}
     </div>
-    <p
-      :class="
-        'text-xl md:text-2xl leading-8 md:leading-9 text-gray-800 dark:text-gray-100 break-inside-avoid ' +
-          props.bodyClass
-      "
+    <div
+      :class="'body-class ' + props.bodyClass"
       v-html="markedPurifiedBody"
     />
   </article>
 </template>
+
+<style>
+.body-class {
+  @apply mb-6 last-of-type:mb-0 break-inside-avoid;
+  @apply text-xl md:text-2xl leading-8 md:leading-9 text-gray-800 dark:text-gray-100;
+}
+
+.body-class p {
+  @apply mb-3 last-of-type:mb-0;
+}
+</style>

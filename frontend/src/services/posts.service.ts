@@ -3,9 +3,7 @@ import { PostType } from '../types';
 import { globalState as state } from '../store';
 
 const globalState = state.value;
-const endpoint = 'http://localhost:8000';
-
-//
+const endpoint = 'https://zquint.xyz/api';
 
 class PostsService {
   loadAllPosts() {

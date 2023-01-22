@@ -15,11 +15,10 @@ onMounted(() => {
 
     <ul class="meta-list">
       <li>
-        <strong>Hosted</strong>
-        on AWS
+        <strong>Hosted</strong> on an ARM SBC running headless Debian. DB on AWS RDS.
       </li>
       <li>
-        <strong>Made with</strong> Vue, Node, TypeScript, Express, and MySQL
+        <strong>Made with</strong> Vue, Node, TypeScript, Express, Tailwind, MUI icons, and MySQL
       </li>
     </ul>
   </article>
