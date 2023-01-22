@@ -48,20 +48,10 @@ const Pages = [
 </template>
 
 <style>
-.v-enter-active,
-.v-leave-active {
-  transition: width 0.2s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  width: 0;
-  margin: 0 !important;
-}
-
 .aside-link {
-  @apply transition-all rounded-md p-1 lg:p-0 hover:p-1 lg:hover:-mr-1 active:p-1 hover:bg-gray-300 active:bg-[#b8b8b8];
-  @apply dark:hover:bg-gray-700 dark:active:bg-gray-600;
+  @apply p-1 lg:p-0 hover:p-1 lg:hover:-mr-1 active:p-1;
+  @apply transition-all rounded-md hover:bg-gray-300 active:bg-[#b8b8b8];
+  @apply dark:hover:bg-gray-700 dark:active:bg-gray-800;
 }
 .active {
   @apply font-semibold text-gray-800 dark:text-gray-100;
