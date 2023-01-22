@@ -2,12 +2,7 @@
 import { ref, onMounted, watch } from 'vue';
 import { globalState } from '../store';
 import icon from './icon.vue';
-import {
-  mdiSunglasses,
-  mdiLightbulbVariantOutline,
-  mdiLightSwitchOff,
-  mdiLightSwitchOn,
-} from '@mdi/js';
+import { mdiSunglasses, mdiLightbulbVariantOutline } from '@mdi/js';
 import { DarkMode } from '../types';
 
 const darkMode = ref<DarkMode>('light');
@@ -96,8 +91,8 @@ function toggleDarkMode() {
 }
 
 #dark-toggle-button {
-  @apply mr-2 mt-2 py-[3px] md:py-[1px] md:mt-0;
-  @apply hover:bg-gray-300 dark:hover:bg-gray-700 active:bg-gray-400 dark:active:bg-gray-600;
-  @apply dark:hover:bg-gray-800 dark:active:bg-black;
+  @apply mr-2 mt-2 py-[3px] md:pt-[1px] md:mt-0;
+  @apply hover:bg-gray-300 active:bg-gray-400 active:shadow-inner active:shadow-gray-500;
+  @apply dark:hover:bg-gray-800 dark:active:bg-black dark:active:shadow-black;
 }
 </style>
