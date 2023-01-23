@@ -1,3 +1,5 @@
+#!/bin/env node
+
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 const express = require('express');
@@ -16,9 +18,6 @@ app.use(cors());
 
 app.use(express.urlencoded({ extended: true, limit: '15mb' }));
 app.use(express.json({ limit: '15mb' }));
-
-// Allows static folder for frontend
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/posts', postsRoute);
