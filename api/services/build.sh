@@ -9,3 +9,5 @@ git clone https://github.com/zqxyz/zquintxyz.git
 cd zquintxyz/frontend
 npm install
 npm run build
+mv dist/* /var/www/html/
+cd ../

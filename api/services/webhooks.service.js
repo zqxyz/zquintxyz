@@ -1,7 +1,8 @@
 // import { spawn } from 'child_process';
 
 exports.deploy = (req, res) => {
-    console.log(req);
+    console.log("deploy goes here");
+    res.status(200).send('Deploying...');
 };
 // const sh = spawn('bash', [path.join(__dirname, 'build.sh')].concat(args), {
 //     stdio: 'inherit',
