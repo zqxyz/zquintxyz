@@ -46,11 +46,5 @@
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
-  },
-  "workspaces": {
-    "nohoist": [
-      "@tailwindcss/forms",
-      "@tailwindcss/forms/**"
-    ]
   }
 }
