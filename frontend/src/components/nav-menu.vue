@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { globalState } from '../store';
 import { computed } from 'vue';
-import icon from './icon.vue';
+import icon from './Base/icon.vue';
 import { mdiPineTree } from '@mdi/js';
 
 const activePage = computed(() => globalState.value.activePage);

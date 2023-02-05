@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { PostType } from '../types';
-import { globalState as state } from '../store';
+import { PostType } from './types';
+import { globalState as state } from '../../store';
 
 const globalState = state.value;
 const endpoint = 'https://zquint.xyz/api';

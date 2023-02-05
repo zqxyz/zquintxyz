@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { onMounted, ref, watch, computed } from 'vue';
 import { globalState } from '../store';
-import { postsService } from '../services/posts.service';
+import { postsService } from '../modules/posts/Posts.service';
 import Post from '../components/posts/Post.vue';
 import { useRoute } from 'vue-router';
-import { PostType } from '../types';
+import { PostType } from '../modules/posts/types';
 
 const state = globalState.value;
 const thisPost = ref({} as PostType | null);

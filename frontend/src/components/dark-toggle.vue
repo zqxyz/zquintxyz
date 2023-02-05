@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, watch } from 'vue';
 import { globalState } from '../store';
-import icon from './icon.vue';
+import icon from './Base/icon.vue';
 import { mdiSunglasses, mdiLightbulbVariantOutline } from '@mdi/js';
 import { DarkMode } from '../types';
 

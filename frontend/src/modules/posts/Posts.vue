@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue';
 import { globalState } from '../../store';
-import { postsService } from '../../services/posts.service';
+import { postsService } from './Posts.service';
 import loadingIndicator from '../loading-indicator.vue';
 import Post from './Post.vue';
 

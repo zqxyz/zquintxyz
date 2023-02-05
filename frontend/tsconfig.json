@@ -14,11 +14,15 @@
         "types": [
             "vite/client"
         ],
-        "allowSyntheticDefaultImports": true,
+        "allowSyntheticDefaultImports": true
     },
     "exclude": [
         "node_modules",
         "dist",
         "public"
+    ],
+    "include": [
+        "./src/**/*.ts",
+        "./src/**/*.vue"
     ]
 }
