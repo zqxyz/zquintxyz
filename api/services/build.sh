@@ -9,5 +9,9 @@ git clone https://github.com/zqxyz/zquintxyz.git
 cd zquintxyz/frontend
 npm install
 npm run build
-mv dist/* /var/www/html/
+sudo rm -rf /var/www/html
+sudo mkdir /var/www/html
+sudo mv frontend/dist/* /var/www/html/
+sudo mv frontend/dist/.htaccess /var/www/html/
+// update api files
 cd ../

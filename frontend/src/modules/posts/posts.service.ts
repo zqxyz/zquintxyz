@@ -3,7 +3,7 @@ import { PostType } from './types';
 import { globalState as state } from '../../store';
 
 const globalState = state.value;
-const endpoint = import.meta.env.VITE_API_PATH;
+const endpoint = window.location.origin + '/api';
 
 class PostsService {
   loadAllPosts() {
