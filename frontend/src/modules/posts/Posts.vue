@@ -26,7 +26,6 @@ onMounted(() => {
       v-else
       :key="post.id"
       :post="post"
-      body-class="line-clamp-3"
     />
   </section>
 </template>

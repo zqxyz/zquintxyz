@@ -9,6 +9,5 @@
     "concurrently": "^7.6.0"
   },
   "devDependencies": {
-    "@tailwindcss/line-clamp": "^0.4.2"
   }
 }
