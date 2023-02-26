@@ -3,7 +3,7 @@ import { PostType } from './types';
 import { globalState as state } from '../../store';
 
 const globalState = state.value;
-const endpoint = 'https://zquint.xyz/api';
+const endpoint = import.meta.env.VITE_API_PATH;
 
 class PostsService {
   loadAllPosts() {

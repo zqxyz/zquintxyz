@@ -1,4 +1,4 @@
-import posts from './views/PostsVIew.vue';
+import posts from './views/PostsView.vue';
 import post from './views/PostView.vue';
 import notFound from './views/NotFoundView.vue';
 import contact from './views/ContactView.vue';

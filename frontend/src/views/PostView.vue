@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref, watch, computed } from 'vue';
 import { globalState } from '../store';
-import { postsService } from '../modules/posts/Posts.service';
-import Post from '../components/posts/Post.vue';
+import { postsService } from '../modules/posts/posts.service';
+import Post from '../modules/posts/Post.vue';
 import { useRoute } from 'vue-router';
 import { PostType } from '../modules/posts/types';
 

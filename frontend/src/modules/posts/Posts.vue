@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue';
 import { globalState } from '../../store';
-import { postsService } from './Posts.service';
-import loadingIndicator from '../loading-indicator.vue';
+import { postsService } from './posts.service';
+import loadingIndicator from '../../components/loading-indicator.vue';
 import Post from './Post.vue';
 
 const state = globalState.value;
@@ -13,6 +13,7 @@ const sortedPosts = computed(() => {
 
 onMounted(() => {
   state.activePage = 'Home';
+  console.log(import.meta.env.VITE_API_PATH);
   postsService.loadAllPosts();
 });
 </script>
